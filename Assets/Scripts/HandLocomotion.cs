@@ -9,12 +9,17 @@ public class HandLocomotion : MonoBehaviour
     public Rigidbody bodyRigidbody;
     public HandCollisionDetector leftHandDetector;
     public HandCollisionDetector rightHandDetector;
+    public PlayerEnergy playerEnergy; // new
+    public float energyPerMove = 5f; // new
+    private float energyDrainCooldown = 1f; // Consume energy once per second
+    private float energyDrainTimer = 0f; // new
+
 
     [Header("Movement Settings")]
     public float movementMultiplier = 1f;
     public float velocityTransferMultiplier = 1f;
     public float maxMovementPerFrame = 0.5f;
-    
+
     [Header("Transition Settings")]
     public int framesBeforeKinematic = 5;
     public int framesBeforeNonKinematic = 10;
@@ -29,7 +34,7 @@ public class HandLocomotion : MonoBehaviour
     private float initialGrabRotation;
     private float initialBodyRotation;
     private bool wasTwoHandedLastFrame;
-    
+
     // Transition counters
     private int kinematicTransitionCounter = 0;
     private int nonKinematicTransitionCounter = 0;
@@ -88,10 +93,10 @@ public class HandLocomotion : MonoBehaviour
                 if (!wasTwoHandedLastFrame)
                 {
                     // Just grabbed with both hands, store initial angles and positions
-                    initialGrabRotation = CalculateHandsAngle(GetLocalHandPosition(leftHandTransform), 
+                    initialGrabRotation = CalculateHandsAngle(GetLocalHandPosition(leftHandTransform),
                                                             GetLocalHandPosition(rightHandTransform));
                     initialBodyRotation = bodyTransform.eulerAngles.y;
-                    
+
                     // Store world positions of grab points
                     leftGrabWorldPosition = leftHandTransform.position;
                     rightGrabWorldPosition = rightHandTransform.position;
@@ -115,7 +120,7 @@ public class HandLocomotion : MonoBehaviour
 
         // Calculate current hands angle
         float currentHandsAngle = CalculateHandsAngle(currentLeftLocal, currentRightLocal);
-        
+
         // Calculate absolute rotation
         float rotationDelta = currentHandsAngle - initialGrabRotation;
         float targetRotation = initialBodyRotation + rotationDelta;
@@ -130,7 +135,7 @@ public class HandLocomotion : MonoBehaviour
         // After rotation, adjust position to maintain hand positions
         Vector3 leftOffset = leftGrabWorldPosition - leftHandTransform.position;
         Vector3 rightOffset = rightGrabWorldPosition - rightHandTransform.position;
-        
+
         // Use average of both hand offsets to move the body
         Vector3 averageOffset = (leftOffset + rightOffset) * 0.5f;
         bodyTransform.position = oldPosition + averageOffset;
@@ -146,7 +151,7 @@ public class HandLocomotion : MonoBehaviour
         Vector2 leftFlat = new Vector2(leftPos.x, leftPos.z);
         Vector2 rightFlat = new Vector2(rightPos.x, rightPos.z);
         Vector2 handsDirection = (rightFlat - leftFlat).normalized;
-        
+
         // Calculate absolute angle
         return Mathf.Atan2(handsDirection.y, handsDirection.x) * Mathf.Rad2Deg;
     }
@@ -246,13 +251,39 @@ public class HandLocomotion : MonoBehaviour
             {
                 inverseMovement = inverseMovement.normalized * maxMovementPerFrame;
             }
-            
+
             // Move using MovePosition for smoother physics-based movement
             bodyRigidbody.MovePosition(bodyRigidbody.position + inverseMovement);
-            
+
             // Store velocity for physics transition
             lastVelocity = inverseMovement / Time.fixedDeltaTime * velocityTransferMultiplier;
         }
+
+
+        // Enerji tüketimi
+        if (totalMovement.magnitude > 0.01f)
+        {
+            energyDrainTimer += Time.fixedDeltaTime;
+
+            if (totalMovement.magnitude > 0.01f && energyDrainTimer >= energyDrainCooldown)
+            {
+                if (playerEnergy != null)
+                {
+                    playerEnergy.UseEnergy(energyPerMove);
+
+                    if (playerEnergy.IsOutOfEnergy)
+                    {
+                        bodyRigidbody.isKinematic = false;
+                        return;
+                    }
+                }
+
+                energyDrainTimer = 0f; // Reset the timer
+            }
+
+        }
+
+
     }
 
     private Vector3 GetLocalHandPosition(Transform handTransform)
@@ -267,4 +298,4 @@ public class HandLocomotion : MonoBehaviour
         needsLeftHandReset = false;
         needsRightHandReset = false;
     }
-} 
+}
