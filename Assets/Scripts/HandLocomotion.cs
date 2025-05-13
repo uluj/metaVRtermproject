@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+
 
 public class HandLocomotion : MonoBehaviour
 {
@@ -44,8 +46,15 @@ public class HandLocomotion : MonoBehaviour
     private Vector3 leftGrabWorldPosition;
     private Vector3 rightGrabWorldPosition;
 
+    private float defaultMovementMultiplier; // for sticky platform
+    private Coroutine restoreCoroutine; // for sticky platform
+
+
     private void Start()
     {
+
+        defaultMovementMultiplier = movementMultiplier; // for sticky platform
+
         if (bodyRigidbody == null)
         {
             Debug.LogError("HandLocomotion: Body Rigidbody reference is required!");
@@ -298,4 +307,23 @@ public class HandLocomotion : MonoBehaviour
         needsLeftHandReset = false;
         needsRightHandReset = false;
     }
+
+    // for sticky platform
+    public void SetMovementMultiplierTemporarily(float newMultiplier, float duration)
+    {
+        if (restoreCoroutine != null)
+            StopCoroutine(restoreCoroutine);
+
+        movementMultiplier = newMultiplier;
+        restoreCoroutine = StartCoroutine(RestoreMovementMultiplier(duration));
+    }
+
+    // for sticky platform
+    private IEnumerator RestoreMovementMultiplier(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        movementMultiplier = defaultMovementMultiplier;
+        restoreCoroutine = null;
+    }
+
 }
