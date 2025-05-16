@@ -433,6 +433,7 @@ GameObject:
   - component: {fileID: 25588256}
   - component: {fileID: 25588255}
   - component: {fileID: 25588254}
+  - component: {fileID: 25588258}
   m_Layer: 0
   m_Name: lava_basamak (9)
   m_TagString: Climbable
@@ -526,6 +527,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &25588258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25588253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f57013854e624cb9bd4304515dc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbableSurfaceTag: Climbable
+  controller: -1
 --- !u!1 &28494537
 GameObject:
   m_ObjectHideFlags: 0
@@ -4210,6 +4225,7 @@ GameObject:
   - component: {fileID: 140847332}
   - component: {fileID: 140847331}
   - component: {fileID: 140847330}
+  - component: {fileID: 140847334}
   m_Layer: 0
   m_Name: lava_basamak (8)
   m_TagString: Climbable
@@ -4303,6 +4319,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &140847334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140847329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f57013854e624cb9bd4304515dc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbableSurfaceTag: Climbable
+  controller: -1
 --- !u!1 &144832671
 GameObject:
   m_ObjectHideFlags: 0
@@ -15717,6 +15747,7 @@ GameObject:
   - component: {fileID: 631052839}
   - component: {fileID: 631052838}
   - component: {fileID: 631052837}
+  - component: {fileID: 631052841}
   m_Layer: 0
   m_Name: lava_basamak
   m_TagString: Climbable
@@ -15810,6 +15841,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &631052841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631052836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f57013854e624cb9bd4304515dc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbableSurfaceTag: Climbable
+  controller: -1
 --- !u!1 &635007555
 GameObject:
   m_ObjectHideFlags: 0
@@ -19826,6 +19871,7 @@ GameObject:
   - component: {fileID: 781799165}
   - component: {fileID: 781799164}
   - component: {fileID: 781799163}
+  - component: {fileID: 781799167}
   m_Layer: 0
   m_Name: lava_basamak (3)
   m_TagString: Climbable
@@ -19919,6 +19965,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &781799167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781799162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f57013854e624cb9bd4304515dc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbableSurfaceTag: Climbable
+  controller: -1
 --- !u!1 &782029414
 GameObject:
   m_ObjectHideFlags: 0
@@ -21050,6 +21110,7 @@ GameObject:
   - component: {fileID: 819813757}
   - component: {fileID: 819813756}
   - component: {fileID: 819813755}
+  - component: {fileID: 819813759}
   m_Layer: 0
   m_Name: lava_basamak (13)
   m_TagString: Climbable
@@ -21143,6 +21204,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &819813759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819813754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f57013854e624cb9bd4304515dc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbableSurfaceTag: Climbable
+  controller: -1
 --- !u!1 &822624171
 GameObject:
   m_ObjectHideFlags: 0
@@ -23455,6 +23530,7 @@ GameObject:
   - component: {fileID: 939536522}
   - component: {fileID: 939536521}
   - component: {fileID: 939536520}
+  - component: {fileID: 939536524}
   m_Layer: 0
   m_Name: lava_basamak (1)
   m_TagString: Climbable
@@ -23548,6 +23624,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &939536524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939536519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f57013854e624cb9bd4304515dc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbableSurfaceTag: Climbable
+  controller: -1
 --- !u!1 &941650363
 GameObject:
   m_ObjectHideFlags: 0
@@ -27656,6 +27746,7 @@ GameObject:
   - component: {fileID: 1118181358}
   - component: {fileID: 1118181357}
   - component: {fileID: 1118181356}
+  - component: {fileID: 1118181360}
   m_Layer: 0
   m_Name: lava_basamak (7)
   m_TagString: Climbable
@@ -27749,6 +27840,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1118181360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118181355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f57013854e624cb9bd4304515dc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbableSurfaceTag: Climbable
+  controller: -1
 --- !u!1 &1127956653
 GameObject:
   m_ObjectHideFlags: 0
@@ -32732,6 +32837,7 @@ GameObject:
   - component: {fileID: 1299270515}
   - component: {fileID: 1299270514}
   - component: {fileID: 1299270513}
+  - component: {fileID: 1299270517}
   m_Layer: 0
   m_Name: lava_basamak (2)
   m_TagString: Climbable
@@ -32825,6 +32931,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1299270517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299270512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f57013854e624cb9bd4304515dc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbableSurfaceTag: Climbable
+  controller: -1
 --- !u!1001 &1300572423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34177,6 +34297,7 @@ GameObject:
   - component: {fileID: 1339395013}
   - component: {fileID: 1339395012}
   - component: {fileID: 1339395011}
+  - component: {fileID: 1339395015}
   m_Layer: 0
   m_Name: lava_basamak (6)
   m_TagString: Climbable
@@ -34270,6 +34391,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1339395015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339395010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f57013854e624cb9bd4304515dc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbableSurfaceTag: Climbable
+  controller: -1
 --- !u!1 &1339779762
 GameObject:
   m_ObjectHideFlags: 0
@@ -34282,6 +34417,7 @@ GameObject:
   - component: {fileID: 1339779765}
   - component: {fileID: 1339779764}
   - component: {fileID: 1339779763}
+  - component: {fileID: 1339779767}
   m_Layer: 0
   m_Name: lava_basamak (14)
   m_TagString: Climbable
@@ -34375,6 +34511,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1339779767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339779762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f57013854e624cb9bd4304515dc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbableSurfaceTag: Climbable
+  controller: -1
 --- !u!1001 &1340484194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34444,6 +34594,7 @@ GameObject:
   - component: {fileID: 1341177652}
   - component: {fileID: 1341177651}
   - component: {fileID: 1341177650}
+  - component: {fileID: 1341177654}
   m_Layer: 0
   m_Name: lava_basamak (11)
   m_TagString: Climbable
@@ -34537,6 +34688,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1341177654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341177649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f57013854e624cb9bd4304515dc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbableSurfaceTag: Climbable
+  controller: -1
 --- !u!1 &1346112502
 GameObject:
   m_ObjectHideFlags: 0
@@ -38958,6 +39123,7 @@ GameObject:
   - component: {fileID: 1533723274}
   - component: {fileID: 1533723273}
   - component: {fileID: 1533723272}
+  - component: {fileID: 1533723276}
   m_Layer: 0
   m_Name: lava_basamak (10)
   m_TagString: Climbable
@@ -39051,6 +39217,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1533723276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533723271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f57013854e624cb9bd4304515dc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbableSurfaceTag: Climbable
+  controller: -1
 --- !u!1 &1533732849
 GameObject:
   m_ObjectHideFlags: 0
@@ -39535,6 +39715,7 @@ GameObject:
   - component: {fileID: 1550980051}
   - component: {fileID: 1550980050}
   - component: {fileID: 1550980049}
+  - component: {fileID: 1550980053}
   m_Layer: 0
   m_Name: lava_basamak (4)
   m_TagString: Untagged
@@ -39628,6 +39809,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1550980053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550980048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f57013854e624cb9bd4304515dc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbableSurfaceTag: Climbable
+  controller: -1
 --- !u!1001 &1554031514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42361,6 +42556,7 @@ GameObject:
   - component: {fileID: 1668104431}
   - component: {fileID: 1668104430}
   - component: {fileID: 1668104429}
+  - component: {fileID: 1668104433}
   m_Layer: 0
   m_Name: lava_basamak (12)
   m_TagString: Climbable
@@ -42454,6 +42650,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1668104433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668104428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f57013854e624cb9bd4304515dc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbableSurfaceTag: Climbable
+  controller: -1
 --- !u!1 &1669255922
 GameObject:
   m_ObjectHideFlags: 0
@@ -53068,6 +53278,7 @@ GameObject:
   - component: {fileID: 2104565442}
   - component: {fileID: 2104565441}
   - component: {fileID: 2104565440}
+  - component: {fileID: 2104565444}
   m_Layer: 0
   m_Name: lava_basamak (5)
   m_TagString: Climbable
@@ -53161,6 +53372,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &2104565444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104565439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f57013854e624cb9bd4304515dc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbableSurfaceTag: Climbable
+  controller: -1
 --- !u!1 &2110993950
 GameObject:
   m_ObjectHideFlags: 0
