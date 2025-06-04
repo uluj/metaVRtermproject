@@ -8,8 +8,11 @@ public class BreakablePlatform : MonoBehaviour
     public float pieceLifetime = 5f; // parts will disappear after 5 seconds
     private bool isBreaking = false;
 
+    AudioManager audioManager;
+
     private void OnCollisionEnter(Collision collision)
     {
+        audioManager.PlaySFX(audioManager.breake);
         Debug.Log("Collision occured: " + collision.gameObject.name);
 
         if (isBreaking) return;

@@ -13,6 +13,7 @@ TagManager:
   - Mug5
   - Mug1
   - Climbable
+  - Audio
   layers:
   - Default
   - TransparentFX

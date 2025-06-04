@@ -7,6 +7,8 @@ using TMPro;
 
 public class Keypad1 : MonoBehaviour
 {
+    AudioManager audioManager;
+    
     [Header("Keypad Buttons (VR)")]
     public PokeInteractable keypad1;
     public PokeInteractable keypad2;
@@ -44,6 +46,8 @@ public class Keypad1 : MonoBehaviour
 
         keypadClear.WhenPointerEventRaised += (pe) => { if (pe.Type == PointerEventType.Select) HandleInput("clear"); };
         keypadEnter.WhenPointerEventRaised += (pe) => { if (pe.Type == PointerEventType.Select) HandleInput("enter"); };
+        
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     private void Start()
@@ -101,6 +105,7 @@ public class Keypad1 : MonoBehaviour
 
     private void ifCorrect()
     {
+        audioManager.PlaySFX(audioManager.correct);
         Animator animator = AnimatorObject.GetComponent<Animator>();
         if (animator != null)
         {
@@ -109,6 +114,7 @@ public class Keypad1 : MonoBehaviour
         }
         else
         {
+            audioManager.PlaySFX(audioManager.wrong);
             Debug.LogWarning("Animator component is missing!");
         }
     }
